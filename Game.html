@@ -5,13 +5,41 @@
         <title> About the beach </title>
       </head>
     <body>
+
+<button onclick="myFunction()">Start the game</button>
+
 <script>
-var number = Math.round ( Math.random()*100+1
-while ( guess !=number) {
-var guess = prompt("Guess a number between 1 and 100");
-if (number>guess) alert("Low");
-else if ( number<guess) alert("High");
-else{alert("Correct you win !");}}
+
+function myFunction() {
+  var number = Math.round ( Math.random()*100)+1;
+  
+  while ( guess !=number) {
+    var guess = prompt("Guess a number between 1 and 100");
+
+  if (number>guess) 
+  {
+  	alert("The number you entered is Low..try again");
+       if (confirm("Press 'Ok' to leave the game, or 'Cancel' if you want to continue: "))
+            {
+            break;
+            }
+  }
+  else if ( number<guess) {
+  	alert("The number you entered is High..try again");
+            if (confirm("Press 'Ok' to leave the game, or 'Cancel' if you want to continue: "))
+            {
+            break;
+            }
+}
+  
+  
+  else{alert("Correct you win !");}
+ }
+  
+}
       </script>
   </body>
+
+
 </html>
+
