@@ -2,11 +2,16 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> About the beach </title>
+        <title> Ansh's Game </title>
       </head>
     <body>
 
-<button onclick="myFunction()">Start the game</button>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="myFunction()">Start the Game</button>&nbsp;&nbsp;
+<button onclick="myFunction2()">Exit the page</button>
+
+
 
 <script>
 
@@ -19,24 +24,24 @@ function myFunction() {
   if (number>guess) 
   {
   	alert("The number you entered is Low..try again");
-       if (confirm("Press 'Ok' to leave the game, or 'Cancel' if you want to continue: "))
-            {
-            break;
-            }
+
   }
   else if ( number<guess) {
   	alert("The number you entered is High..try again");
-            if (confirm("Press 'Ok' to leave the game, or 'Cancel' if you want to continue: "))
-            {
-            break;
-            }
-}
+
+	}
   
   
   else{alert("Correct you win !");}
  }
   
 }
+      
+      function myFunction2() {
+      window.location="https://happycoder2000.github.io/";
+      }
+      
+      
       </script>
   </body>
 
