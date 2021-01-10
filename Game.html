@@ -15,25 +15,39 @@
 
 <script>
 
+count=1;
+
 function myFunction() {
   var number = Math.round ( Math.random()*100)+1;
   
   while ( guess !=number) {
     var guess = prompt("Guess a number between 1 and 100");
 
-  if (number>guess) 
-  {
-  	alert("The number you entered is Low..try again");
+    if (number>guess) 
+    {
+      alert("The number you entered is Low..try again");
+
+    }
+    else if ( number<guess) {
+      alert("The number you entered is High..try again");
+
+      }
+
+
+    else{
+      alert("Correct you win !");
+    }
+    
+    
+
+    if ( count==10){
+        document.write("You did not win in "+count+" attempts, start the game again or exit the page!");
+        break;
+
+    }
+    count++;
 
   }
-  else if ( number<guess) {
-  	alert("The number you entered is High..try again");
-
-	}
-  
-  
-  else{alert("Correct you win !");}
- }
   
 }
       
@@ -41,7 +55,7 @@ function myFunction() {
       window.location="https://happycoder2000.github.io/";
       }
       
-      
+
       </script>
   </body>
 
