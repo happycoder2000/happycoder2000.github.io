@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title> Ansh's Game </title>
-      </head>
-    <body>
-
-<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="myFunction()">Start the Game</button>&nbsp;&nbsp;
-<button onclick="myFunction2()">Exit the page</button>
-
-<h1>Instructions</h1>
-
-<p> If you want to play the game press the Start game button. Then a text box will appear. It will ask you to guess a random number. Keep on guessing until you get the number. You will have 10 attempts to find out the number. If you can't find out the number in the 10 attempts you will lose. If you find out the number in the 10 attempts then you have won!</p> 
-
-<script>
-
-count=1;
-
-function myFunction() {
-  var number = Math.round ( Math.random()*100)+1;
-  
-  while ( guess !=number) {
-    var guess = prompt("Guess a number between 1 and 100");
-
-    if (number>guess) 
-    {
-      alert("The number you entered is Low..try again");
-
-    }
-    else if ( number<guess) {
-      alert("The number you entered is High..try again");
-
-      }
-
-
-    else{
-      alert("Correct you win !");
-      document.write("no of atempts you won in:"+count);
-
-    }
-    
-    
-
-    if ( count==10){
-        document.write(" You did not win in "+count+" attempts, start the game again or exit the page!");
-        break;
-     
-    }
-    
-   
-        
-    count++;
-
+<head>
+  <title>Ansh's Guessing game</title>
+  <script>
+  var number = Math.round ( Math.random()*100+1);
+  function newGame(){
+     document.getElementById("guess").value ='';
+     document.getElementById("output").innerHTML ='New Game has started!!Guess a number and press the button..';
+     number = Math.round ( Math.random()*100+1);
+    document.getElementById("guess").focus();
+    document.getElementById("guess").select();
   }
-  
-}
-      
-      function myFunction2() {
-      window.location="https://happycoder2000.github.io/";
+  function checkGuess(){
+ 	var guess = document.getElementById("guess").value;
+    var msg = "";
+    if (guess > number){
+      mssg = guess + " was too high. Try again.";}
+      else if (guess < number){
+        msg = guess + " was too low. Try again.";}
+        else{
+          msg = guess + " was the number! you win!";
+          msg = msg + "Try a new game.";
+
+        }
+        var output = document.getElementById("output")
+        output.innerHTML = msg;
+        document.getElementById("guess").focus();
+        document.getElementById("guess").select();
       }
-      
-       
       </script>
-  </body>
-
-
-</html>
+    </head>
+    <body onload = "newGame()" >
+      <h1>Ansh's Guessing game</h1>
+      <form onsubmit="checkGuess(); return false;">
+        Enter a number between 1 and 100:
+        <input type="text" id="guess" size="1">
+        <button id=guess1 type="button" onclick="checkGuess();">Guess!</button>
+        <button id=empty type="button" onclick="newGame();">Start New Game</button>
+      </form>
+      <h3 id="output">Guess a number and press the button..</h3>
+    </body>
+    </html>
