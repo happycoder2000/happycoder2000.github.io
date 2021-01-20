@@ -15,13 +15,13 @@
  	var guess = document.getElementById("guess").value;
     var msg = "";
     if (guess > number){
-      mssg = guess + " was too high. Try again.";}
+      msg = guess + " was too high. Try again.";}
       else if (guess < number){
         msg = guess + " was too low. Try again.";}
         else{
           msg = guess + " was the number! you win!";
           msg = msg + "Try a new game.";
-
+         // newGame();
         }
         var output = document.getElementById("output")
         output.innerHTML = msg;
