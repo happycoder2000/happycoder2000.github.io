@@ -10,6 +10,7 @@
      document.getElementById("guess").value ='';
      document.getElementById("output").innerHTML ='New Game has started!!Guess a number and press the button..';
      number = Math.round ( Math.random()*100+1);
+document.getElementById("output2").value="";
     document.getElementById("guess").focus();
     document.getElementById("guess").select();
   }
@@ -23,7 +24,7 @@
         else if (guess = number){
           msg = guess + " was the number! you win!";
           msg = msg + "Try a new game.";
-           document.getElementById("output2").innerHTML="Number of tries it took you to win : " + times
+           document.getElementById("output2").innerHTML="Number of tries it took you to win : " + times;
           
         }
     
