@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+var n = Math.round ( Math.random()*4+1);
+function No(){
+if(n == 1){document.getElementById("h3").innerHTML="Yes";}
+else if(n == 2){document.getElementById("h3").innerHTML="No";}
+else if(n == 3){document.getElementById("h3").innerHTML="Maybe";}
+else{document.getElementById("h3").innerHTML="Error";}}
+</script>
+</head>
+<body>
+<h1>Welcome to the magic 8 ball !</h1>
+<h3>Please enter your question</h3>
+<input type = "text"> <button type="button" onclick="No();">Enter</button>
+<h3 id=h3></h3>
+</body>
+</html>
