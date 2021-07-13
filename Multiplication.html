@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My multiplication calculator</title>
+<script>
+function Myfunction(){
+var num1 = document.getElementById("in").value 
+var num2 = document.getElementById("in2").value
+document.getElementById("h3").innerHTML = "The answer is " + num1 * num2 + " ."; }
+</script>
+</head>
+<body>
+<h3>First number</h3>
+<input type="text" id="in"> 
+<h3>Second number</h3>
+<input type="text" id="in2"> 
+<button type="button" onclick = "Myfunction();" >Enter</button>
+<h3 id="h3"></h3>
+</body>
+</html>
