@@ -1,5 +1,8 @@
 
-var balls = [ ];
+<!DOCTYPE html>
+<html>
+  <body bgcolor="#0000FF">
+    <script>var balls = [ ];
 setInterval(animate, 36 );
 class Ball {
   constructor(posx, posy){
@@ -69,3 +72,11 @@ class Ball {
  function Clearallcircles(){
    balls = [ ]
  }
+</script>
+    <h1>Ansh's Animated Drawing Program</h1>
+    <canvas id="myCanvas" width="1000" height="450"  onmousemove="draw(event)">
+</canvas>
+<button type="button" onclick="Clearallcircles();">Delete all circles</button>
+</body>
+</html>
+
