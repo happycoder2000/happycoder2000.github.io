@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <body bgcolor="#0000FF">
+  <body bgcolor="#800080">
     <script>
     function randColor(){
     var r = Math.round(Math.random() *240 + 16);
@@ -15,7 +15,7 @@
     var rect = canvas.getBoundingClientRect();
     var posx = e.clientX - rect.left;
     var posy = e.clientY - rect.top;
-    ctx.fillStyle = randColor();
+    ctx.fillStyle = randColor() + "33";
     ctx.beginPath();
     ctx.arc(posx,posy,25,0, Math.PI * 2);
     ctx.fill();
