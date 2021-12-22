@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,74 +10,119 @@ function calculate(){
   var rate = parseFloat(document.getElementById("rate").value);
   var years = parseInt(document.getElementById("years").value);
   var total = 0;
-  var totals = [ ]
+  var totals = [ ];
   for( var n = 0; n < years; n++) {
       total = total * ( 1 + rate / 100) + amount * 12;
       totals.push(Math.round(total) );
+
   }
 
   document.getElementById("output").innerHTML =
   "After " + years + "years, you'll have saved $ " + Math.round(total) + " 𝜋";
   drawGraph(totals);
 }
+function calculate2(){
+  var amount = parseInt(document.getElementById("amount").value);
+  var rate = parseFloat(document.getElementById("rate").value);
+  var years = parseInt(document.getElementById("years").value);
+    var Money = 0;
+    var Moneys = [ ];
+    for( var n = 0; n <= years; n++) {
+        Money = amount * (1+ (n*rate/100));
+        Moneys.push(Math.round(Money) );
+}
+
+    document.getElementById("output").innerHTML =
+    "After " + years + "years, you'll have saved $ " + Math.round(Money) + " 𝜋";
+    drawGraph(Moneys);
+}
 function drawGraph( arr ) {
-  var canvas = document.getElementById("graph");
-  var ctx = canvas.getContext("2d");
-  var l = arr.length;
-  var w = canvas.width;
-  var h = canvas.height;
-  ctx.clearRect(0,0,w,h)
-  var barw = w / l;
-  var maxval = arr [arr.length - 1];
-  for(var n = 0 ; n < l; n++)
-  {
-    var top = h - (h * arr[n] / maxval);
-    var left = n * barw;
-    ctx.fillStyle = "#00aa00";
-    ctx.fillRect(left, top, barw, h);
-if(n == Math.floor (l/4) ){
-    ctx.font = "12px Arial"
-    ctx.fillStyle = "#000000"
+      var canvas = document.getElementById("graph");
+      var ctx = canvas.getContext("2d");
+      var l = arr.length;
+      var w = canvas.width;
+      var h = canvas.height;
+      ctx.clearRect(0,0,w,h)
+      var barw = w / l;
+      var maxval = arr [arr.length - 1];
+      for(var n = 0 ; n < l; n++)
+      {
+        var top = h - (h * arr[n] / maxval);
+        var left = n * barw;
+        ctx.fillStyle = "#00aa00";
+        ctx.fillRect(left, top, barw, h);
+        if(n == Math.floor (l/4) ){
+          ctx.font = "12px Arial"
+          ctx.fillStyle = "#000000"
 
-    ctx.fillText(arr[n] + " at " + n + " years", left-10, top-20);
-  } 
+          ctx.fillText(arr[n] + " at " + n + " years", left-10, top-20);
+        }
 
 
-if (n == Math.floor ( l/2 ) ){
-  ctx.font = "12px Arial"
-  ctx.fillStyle = "#000000"
+        if (n == Math.floor ( l/2 ) ){
+          ctx.font = "12px Arial"
+          ctx.fillStyle = "#000000"
 
-ctx.fillText(arr[n] + " at " + n + " years", left-40, top-20);
+          ctx.fillText(arr[n] + " at " + n + " years", left-40, top-20);
+        }
+        if (n == Math.floor ( 3 * l/4 ) ){
+          ctx.font = "12px Arial"
+          ctx.fillStyle = "#000000"
+
+          ctx.fillText(arr[n] + " at " + n + " years", left-70, top-20);
+        }
+      }
+  }
+
+
+
+
+function checkWhichOne(){
+    //  const btn = document.querySelector('#button');
+// handle button click
+  //  button.onclick = function () {
+        const rbs = document.querySelectorAll('input[name="savingoptions"]');
+        if (rbs[0].checked)
+          calculate();
+          //alert('hi');
+        if (rbs[1].checked)
+          //alert('hi2');
+          calculate2();
+
+  //  }
 }
-if (n == Math.floor ( 3 * l/4 ) ){
-  ctx.font = "12px Arial"
-  ctx.fillStyle = "#000000"
 
-  ctx.fillText(arr[n] + " at " + n + " years", left-70, top-20);
-}
-}
-}
 </script>
 </head>
 <body bgcolor="#aaffaa">
-<h1> Ansh's savings calculator</h1>
-<form>
-<table>
-<tr>
-<td>Enter your monthy savings amount(𝜋):</td>
-<td> <input type="text"  id="amount"></td>
-</tr>
-<tr>
-<td>Enter your annual interest rate(%):</td>
-<td> <input type="text"  id="rate"></td>
-</tr>
-<tr>
-<td>Enter number of years you'll save:</td>
-<td> <input type="text"  id="years"></td>
-</tr>
-</table>
-<button type="button" onclick="calculate()">Click to calculate your savings.</button>
-<h3 id="output">See how much you'll save...</h3>
-<canvas id="graph" width="500" height="315"></canvas>
+<h1> Ansh's savings calculator</h1> <br></br>
+<form action="/action_page.php">
+  <input type ="radio" id ="monthly" name ="savingoptions" value="monthly" >
+  <label for="monthly"> Monthly Savings</label>
+  <input type ="radio" id ="once" name ="savingoptions" value="once">
+  <label for="once"> One time savings</label>
+   <br></br>
+
+    <table>
+        <tr>
+
+        <td>Enter your monthy/one time savings amount(𝜋):</td>
+
+        <td> <input type="text"  id="amount"></td>
+        </tr>
+        <tr>
+        <td>Enter your annual interest rate(%):</td>
+        <td> <input type="text"  id="rate"></td>
+        </tr>
+        <tr>
+        <td>Enter number of years you'll save:</td>
+        <td> <input type="text"  id="years"></td>
+        </tr>
+    </table>
+    </br>
+    <button type="button" id="button" onclick="checkWhichOne()">Click to calculate your savings.</button>
+    <h3 id="output">See how much you'll save...</h3>
+</form>
+<canvas id="graph" width="500" height="400"></canvas>
 </body>
 </html>
