@@ -1,27 +1,58 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>HTML Calculator</title>
-</head>
-<body bgcolor= "#000000" text= "gold">
-<form name="calculator" >
-<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-<input type="button" value="3" onClick="document.calculator.ans.value+='3'"><br>
-<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-<input type="button" value="7" onClick="document.calculator.ans.value+='7'"><br>
-<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
-<input type="button" value="+" onClick="document.calculator.ans.value+='+'"><br>
-<input type="button" value="x" onClick="document.calculator.ans.value+='*'">
-<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+<body>
+<script>
+function checkWhichOne(){
+        const rbs = document.querySelectorAll('input[name="type1"]');
+        if (rbs[0].checked)
+          calculate();
+        if (rbs[1].checked)
+          calculate2();
+          if (rbs[2].checked)
+          calculate3();
+          if (rbs[3].checked)
+          calculate4();
 
-<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-<input type="reset" value="Reset">
-<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
-<br>Solution is <input type="textfield" name="ans" value="">
-</form>
+}
+	function calculate(){
+      var num1 = parseFloat(prompt("Enter your first number"));
+      var num2 = parseFloat(prompt("Enter your second number"));
+      var answer = num1 + num2;
+      document.getElementById("h4").innerHTML = "Answer : " + 		  answer;
+    }
+    
+    function calculate2(){
+      var num1 = prompt("Enter your first number");
+      var num2 = prompt("Enter your second number");
+      var answer = num1 - num2;
+      document.getElementById("h4").innerHTML = "Answer : " + 		  answer;
+    }
+
+
+	function calculate3(){
+      var num1 = prompt("Enter your first number");
+      var num2 = prompt("Enter your second number");
+      var answer = num1 * num2;
+      document.getElementById("h4").innerHTML = "Answer : " +             answer;
+    }
+    
+    function calculate4(){
+      var num1 = prompt("Enter your first number");
+      var num2 = prompt("Enter your second number");
+      var answer = num1 / num2;
+      document.getElementById("h4").innerHTML = "Answer : " +             answer;
+    }
+</script>
+<input type = "radio"  id = "Add" name = "type1" value = "add">
+<label for="Add">addition</label><br>
+<input type = "radio" id = "Sub" name = "type1" value = "sub">
+<label for="Sub">subtraction</label><br>
+<input type = "radio" id = "Multi" name = "type1" value = "multi">
+<label for="Multi">multiplication</label><br>
+<input type = "radio" id = "Divide" name = "type1" value = "divide">
+<label for="Divide">division</label><br>
+<br></br>
+<button type = "button" onclick = "checkWhichOne()">Enter</button>
+<h3 id = "h4"></h3>
 </body>
 </html>
