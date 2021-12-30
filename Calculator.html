@@ -1,3 +1,5 @@
+
+   
 <!DOCTYPE html>
 <html>
 <body>
@@ -15,32 +17,32 @@ function checkWhichOne(){
 
 }
 	function calculate(){
-      var num1 = parseFloat(prompt("Enter your first number"));
-      var num2 = parseFloat(prompt("Enter your second number"));
+      var num1 = parseFloat(document.getElementById("input1").value);
+      var num2 = parseFloat(document.getElementById("input2").value);
       var answer = num1 + num2;
-      document.getElementById("h4").innerHTML = "Answer : " + 		  answer;
+      document.getElementById("h4").innerHTML = "Answer : " + answer;
     }
     
     function calculate2(){
-      var num1 = prompt("Enter your first number");
-      var num2 = prompt("Enter your second number");
+      var num1 = parseFloat(document.getElementById("input1").value);
+      var num2 = parseFloat(document.getElementById("input2").value);
       var answer = num1 - num2;
-      document.getElementById("h4").innerHTML = "Answer : " + 		  answer;
+      document.getElementById("h4").innerHTML = "Answer : " + answer;
     }
 
 
 	function calculate3(){
-      var num1 = prompt("Enter your first number");
-      var num2 = prompt("Enter your second number");
+      var num1 = parseFloat(document.getElementById("input1").value);
+      var num2 = parseFloat(document.getElementById("input2").value);
       var answer = num1 * num2;
-      document.getElementById("h4").innerHTML = "Answer : " +             answer;
+      document.getElementById("h4").innerHTML = "Answer : " + answer;
     }
     
     function calculate4(){
-      var num1 = prompt("Enter your first number");
-      var num2 = prompt("Enter your second number");
+      var num1 = parseFloat(document.getElementById("input1").value);
+      var num2 = parseFloat(document.getElementById("input2").value);
       var answer = num1 / num2;
-      document.getElementById("h4").innerHTML = "Answer : " +             answer;
+      document.getElementById("h4").innerHTML = "Answer : " + answer;
     }
 </script>
 <input type = "radio"  id = "Add" name = "type1" value = "add">
@@ -51,6 +53,9 @@ function checkWhichOne(){
 <label for="Multi">multiplication</label><br>
 <input type = "radio" id = "Divide" name = "type1" value = "divide">
 <label for="Divide">division</label><br>
+<br></br>
+<h4>Enter your first number : </h4> <input type = "text" id = "input1">
+<h4>Enter your second number : </h4> <input type = "text" id = "input2">
 <br></br>
 <button type = "button" onclick = "checkWhichOne()">Enter</button>
 <h3 id = "h4"></h3>
