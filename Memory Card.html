@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<script>
+var times = 1; 
+var num1;
+var num2;
+var num3;
+var num4;
+var num5;
+var num6;
+var num7;
+var num8;
+var num9;
+var num10;
+
+while (num1 == null || num2 == null || num3 == null || num4 == null || num5 == null) {
+	var temp = Math.round ( Math.random()*4+1);
+	if(num1==null && temp != num2 && temp != num3 && temp != num4 && temp != num5){
+    	num1 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num2==null && temp != num1 && temp != num3 && temp != num4 && temp != num5){
+    	num2 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num3==null && temp != num1 && temp != num2 && temp != num4 && temp != num5){
+    	num3 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num4==null && temp != num1 && temp != num2 && temp != num3 && temp != num5){
+    	num4 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num5==null && temp != num1 && temp != num2 && temp != num3 && temp != num4){
+    	num5 = temp;
+
+   }
+}
+
+while (num6 == null || num7 == null || num8 == null || num9 == null || num10 == null) {
+	temp = Math.round ( Math.random()*4+1);
+	if(num6==null && temp != num7 && temp != num8 && temp != num9 && temp != num10){
+    	num6 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num7==null && temp != num6 && temp != num8 && temp != num9 && temp != num10){
+    	num7 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num8==null && temp != num6 && temp != num7 && temp != num9 && temp != num10){
+    	num8 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num9==null && temp != num6 && temp != num7 && temp != num8 && temp != num10){
+    	num9 = temp;
+    }
+    
+   temp = Math.round ( Math.random()*4+1);
+	if(num10==null && temp != num6 && temp != num7 && temp != num8 && temp != num9){
+    	num10 = temp;
+
+   }
+}
+
+var x2;
+
+function myFunction(){
+	alert("No one can copy my code !");
+}
+
+function fn(){
+	document.getElementById("output2").innerHTML="";
+    document.getElementById("output3").innerHTML="";
+}
+
+function RandomNum1(){
+	if(times == 1){
+    	x2 = document.getElementById("btn1");
+        var x = document.getElementById("btn1");
+		document.getElementById("output2").innerHTML=num1;
+         x.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num1;    	
+        var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+    	var x = document.getElementById("btn1");
+        if(firstno == secondno){
+          x.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum2(){
+	if(times == 1){
+    	x2 = document.getElementById("btn2");
+        var y = document.getElementById("btn2");
+		document.getElementById("output2").innerHTML=num2;
+        y.style.display = "none";
+        times++;
+    }
+    else{
+    	document.getElementById("output3").innerHTML=num2;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var y = document.getElementById("btn2");
+        if(firstno == secondno){
+          y.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum3(){
+	if(times == 1){
+		x2 = document.getElementById("btn3");
+        var z = document.getElementById("btn3");
+		document.getElementById("output2").innerHTML=num3;
+        z.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num3;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var z = document.getElementById("btn3");
+        if(firstno == secondno){
+          z.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum4(){
+	if(times == 1){
+		x2 = document.getElementById("btn4");
+        var w = document.getElementById("btn4");
+		document.getElementById("output2").innerHTML=num4;
+        w.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num4;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var w = document.getElementById("btn4");
+        if(firstno == secondno){
+          w.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum5(){
+	if(times == 1){
+		x2 = document.getElementById("btn5");
+        var v = document.getElementById("btn5");
+		document.getElementById("output2").innerHTML=num5;
+        v.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num5;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var v = document.getElementById("btn5");
+        if(firstno == secondno){
+          v.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum6(){
+	if(times == 1){
+		x2 = document.getElementById("btn6");
+        var u = document.getElementById("btn6");
+		document.getElementById("output2").innerHTML=num6;
+        u.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num6;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var u = document.getElementById("btn6");
+        if(firstno == secondno){
+          u.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum7(){
+	if(times == 1){
+		x2 = document.getElementById("btn7");
+        var t = document.getElementById("btn7");
+		document.getElementById("output2").innerHTML=num7;
+        t.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num7;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var t = document.getElementById("btn7");
+        if(firstno == secondno){
+          t.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum8(){
+	if(times == 1){
+		x2 = document.getElementById("btn8");
+        var a = document.getElementById("btn8");
+		document.getElementById("output2").innerHTML=num8;
+        a.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num8;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var a = document.getElementById("btn8");
+        if(firstno == secondno){
+          a.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}													  
+function RandomNum9(){
+	if(times == 1){
+		x2 = document.getElementById("btn9");
+        var b = document.getElementById("btn9");
+		document.getElementById("output2").innerHTML=num9;
+        b.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num10;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var b = document.getElementById("btn9");
+        if(firstno == secondno){
+          b.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+function RandomNum10(){
+	if(times == 1){
+		x2 = document.getElementById("btn10");
+        var c = document.getElementById("btn10");
+		document.getElementById("output2").innerHTML=num10;
+        c.style.display = "none";
+        times++;
+    }
+    else{
+		document.getElementById("output3").innerHTML=num10;
+    	var firstno = document.getElementById("output2").innerText;
+        var secondno = document.getElementById("output3").innerText;
+        var c = document.getElementById("btn10");
+        if(firstno == secondno){
+          c.style.display = "none";
+          x2.style.display = "none";
+        }
+        if(firstno != secondno){
+          x2.style.display = "block";
+        }
+        setTimeout(fn, 1000);
+        times = 1;
+    }
+}
+</script>
+<body>
+<button id=btn1 type="button" onclick="RandomNum1()">Number 1</button>
+<button id=btn2 type="button" onclick="RandomNum2()">Number 2</button>
+<button id=btn3 type="button" onclick="RandomNum3()">Number 3</button>
+<button id=btn4 type="button" onclick="RandomNum4()">Number 4</button>
+<button id=btn5 type="button" onclick="RandomNum5()">Number 5</button>
+<br></br>
+<button id=btn6 type="button" onclick="RandomNum6()">Number 6</button>
+<button id=btn7 type="button" onclick="RandomNum7()">Number 7</button>
+<button id=btn8 type="button" onclick="RandomNum8()">Number 8</button>
+<button id=btn9 type="button" onclick="RandomNum9()">Number 9</button>
+<button id=btn10 type="button" onclick="RandomNum10()">Number 10</button>
+<h3 id = "output2" ></h3>
+<h3 id = "output3" ></h3>
+</body>
+
+</html>
+
