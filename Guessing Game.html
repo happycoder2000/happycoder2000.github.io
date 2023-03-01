@@ -8,7 +8,7 @@
   function newGame(){
   var times =1;
      document.getElementById("guess").value ='';
-     document.getElementById("output").innerHTML ='New Game has started!!Guess a number and press the button..';
+     document.getElementById("output").innerHTML ='New Game has started!!Guess a number and press the Guess button.. Keep trying with a new number until you guess the right number!!';
      number = Math.round ( Math.random()*100+1);
 document.getElementById("output2").innerHTML="";
     document.getElementById("guess").focus();
@@ -18,9 +18,9 @@ document.getElementById("output2").innerHTML="";
  	var guess = document.getElementById("guess").value;
     var msg = "";
     if (guess > number){
-      msg = guess + " was too high. Try again.";}
+      msg = guess + " was too high. Try another number.";}
       else if (guess < number){
-        msg = guess + " was too low. Try again.";}
+        msg = guess + " was too low. Try another number.";}
         else if (guess = number){
           msg = guess + " was the number! you win!";
           msg = msg + "Try a new game.";
