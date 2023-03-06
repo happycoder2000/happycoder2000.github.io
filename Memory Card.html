@@ -1,5 +1,117 @@
 <!DOCTYPE html>
 <html>
+<style>
+.block1 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block2 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block3 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block4 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block5 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block6 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block7 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block8 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block9 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block10 {
+  display: block1;
+  width: 25%;
+  border: none;
+  background-color: #0000FF;
+  color: white;
+  padding: 50px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+</style>
 <script>
 var times = 1; 
 var num1;
@@ -320,21 +432,38 @@ function RandomNum10(){
         times = 1;
     }
 }
+function French(){
+	document.getElementById("instructions").innerHTML="L'objectif est de faire disparaître toutes les cartes. À chaque tour, vous cliquez sur deux   cartes (une à la fois) et elles disparaissent si elles correspondent (par exemple, deux cartes) Lorsque vous cliquez sur deux cartes qui ne correspondent pas, ces cartes restent à l'écran (dans la même position). L'astuce consiste à se rappeler quelles cartes sont où.";
+    
+}
 </script>
 <body>
-<button id=btn1 type="button" onclick="RandomNum1()">Number 1</button>
-<button id=btn2 type="button" onclick="RandomNum2()">Number 2</button>
-<button id=btn3 type="button" onclick="RandomNum3()">Number 3</button>
-<button id=btn4 type="button" onclick="RandomNum4()">Number 4</button>
-<button id=btn5 type="button" onclick="RandomNum5()">Number 5</button>
+<button type = "button" onclick="French()">Francais</button>
+<button type = "button" onclick="English()">English</button>
+<h2>My memory card game<h2>
+<button id=btn1 class = "block1" type="button" 
+onclick="RandomNum1()">Card 1</button>
+<button id=btn2 class = "block2" type="button" onclick="RandomNum2()">Card 2</button>
+<button id=btn3 class = "block3" type="button" onclick="RandomNum3()">Card 3</button>
+<button id=btn4 class = "block4" type="button" onclick="RandomNum4()">Card 4</button>
+<button id=btn5 class = "block5" type="button" onclick="RandomNum5()">Card 5</button>
 <br></br>
-<button id=btn6 type="button" onclick="RandomNum6()">Number 6</button>
-<button id=btn7 type="button" onclick="RandomNum7()">Number 7</button>
-<button id=btn8 type="button" onclick="RandomNum8()">Number 8</button>
-<button id=btn9 type="button" onclick="RandomNum9()">Number 9</button>
-<button id=btn10 type="button" onclick="RandomNum10()">Number 10</button>
+<button id=btn6 class = "block6" type="button" onclick="RandomNum6()">Card 6</button>
+<button id=btn7 class = "block7" type="button" onclick="RandomNum7()">Card 7</button>
+<button id=btn8 class = "block8" type="button" onclick="RandomNum8()">Card 8</button>
+<button id=btn9 class = "block9" type="button" onclick="RandomNum9()">Card 9</button>
+<button id=btn10 class = "block10" type="button" onclick="RandomNum10()">Card 10</button>
 <h3 id = "output2" ></h3>
 <h3 id = "output3" ></h3>
+
+<h3 id="h3">Instuctions</h3>
+
+<p id="instructions" >The objective is to make all cards disappear.
+On each turn, you click two cards (one at a time) and they vanish if they match (for instance, two ones)
+When you click two cards that do not match, those cards stay on the screen (in the same position).
+The trick is to remember which cards are where.
+</p>
+
 </body>
 
 </html>
