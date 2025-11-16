@@ -67,12 +67,21 @@
             text-align: center;
         }
 
+        .photo-container {
+            display: flex;
+            justify-content: center;  /* center both images */
+            gap: 20px;               /* space between the two images */
+            margin-top: 20px;
+            flex-wrap: wrap;          /* wrap on small screens */
+        }
+        
         .photo img {
-            width: 60%;
-            max-width: 400px;
+            width: 100%;
+            max-width: 400px;         /* limit image size */
             border-radius: 10px;
             box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         }
+
     </style>
 </head>
 
@@ -105,9 +114,15 @@
             <a href="https://happycoder2000.github.io/Content.html">My Web Pages</a>
         </div>
 
-        <div class="photo">
-            <img src="https://happycoder2000.github.io/IMG_1272.jpg">
+        <div class="photo-container">
+            <div class="photo">
+                <img src="https://happycoder2000.github.io/IMG_1272.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="https://happycoder2000.github.io/IMG_1273.jpg" alt="Photo 2">
+            </div>
         </div>
+
 
     </div>
 
