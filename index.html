@@ -1,37 +1,141 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>All about me</title>
+<head>
+    <meta charset="utf-8">
+    <title>All About Me</title>
 
-       <style>
-           Body{background:rgb(173,216,230);}       
-       </style>
+    <style>
+        body {
+            background: rgb(173, 216, 230);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-    </head>
-    <script>
-    function French(){
-	document.getElementById("About-me").innerHTML="Salut, je m'appelle Ansh. J'étudie à Roberta Bondar PS en 5e année. Ma matière préférée est la science parce que c'est intéressant et amusant à apprendre. J'adore coder et j'ai commencé à l'apprendre quand j'étais en 3e année. J'ai utilisé plusieurs langages de programmation pour créer ce site Web et ces jeux.Faire cela était difficile mais j'ai vraiment apprécié. J'espère que vous apprécierez la navigation sur ce site. Vous pouvez soit lire mes blogs, jouer à mes jeux ou parcourir les pages Web"; 
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #004a78;
+        }
+
+        .buttons {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #004a78;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+
+        button:hover {
+            background-color: #003654;
+        }
+
+        .links {
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #004a78;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .photo {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .photo img {
+            width: 60%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="buttons">
+            <button onclick="French()">Français</button>
+            <button onclick="English()">English</button>
+        </div>
+
+        <h2>About Me</h2>
+
+        <p id="About-me">
+            Hello, my name is Ansh Shrivastava, and I’m a Grade 8 student at Lorenville P.S.<br>
+            I enjoy tackling complex math word problems, writing engaging narratives, and delivering well-crafted speeches.
+            My hobbies include coding and playing the piano.<br><br>
+            I am a certified Python programmer and earned 1st place in the Python Beginner section of the 
+            <a href="https://icode.org/final-results/">iCode Global Hackathon</a>, the world’s largest K–12 hackathon.<br><br>
+            I have been working with different programming languages since Grade 3.
+            Building this website was challenging, but I truly enjoyed the experience.<br><br>
+            I hope you have a great time exploring it—whether you choose to read my blogs, play my games, or browse the pages.
+        </p>
+
+        <div class="links">
+            <a href="https://happycoder2000.github.io/Blogs.html">My Blogs</a> &nbsp;|&nbsp;
+            <a href="https://happycoder2000.github.io/Games.html">My Games</a> &nbsp;|&nbsp;
+            <a href="https://happycoder2000.github.io/Content.html">My Web Pages</a>
+        </div>
+
+        <div class="photo">
+            <img src="https://user-images.githubusercontent.com/76495488/222008329-5e83372f-31b2-4950-968a-1021b0d9f649.jpg">
+        </div>
+
+    </div>
+
+<script>
+function French() {
+    document.getElementById("About-me").innerHTML = 
+    "Bonjour, je m’appelle Ansh Shrivastava et je suis élève de 8e année à Lorenville P.S.<br>" +
+    "J’aime résoudre des problèmes de mathématiques complexes, écrire des récits captivants " +
+    "et présenter des discours bien structurés. Mes passe-temps incluent le codage et le piano.<br><br>" +
+    "Je suis programmeur certifié en Python et j’ai remporté la 1ère place dans la catégorie Débutant Python " +
+    "du <a href='https://icode.org/final-results/'>Hackathon mondial iCode</a>, le plus grand hackathon K–12 au monde.<br><br>" +
+    "Je travaille avec différents langages de programmation depuis la 3e année. Construire ce site Web a été un défi, " +
+    "mais j’ai vraiment apprécié l’expérience.<br><br>" +
+    "J’espère que vous passerez un excellent moment en l'explorant—que vous choisissiez de lire mes blogs, " +
+    "jouer à mes jeux ou parcourir mes pages Web.";
 }
-	function English(){
-    document.getElementById("About-me").innerHTML="Hi, my name is Ansh. I study at Roberta Bondar P.S in grade 5. My favorite subject is science because it is interesting and fun to learn. I love coding and started learning it when I was in grade 3. I have used multiple programming languages to create this website and games. Making this was challenging but I thoroughly enjoyed it. I hope you will enjoy browsing this website. You can either read my blogs, play my games or browse the webpages."; 
-}
-    </script>
-    <body>
-        <button type = "button" onclick="French()">Francais</button>
-		<button type = "button" onclick="English()">English</button>
 
-        <p id="About-me">Hello, my name is Ansh Shrivastava, and I’m a Grade 8 student at Lorenville P.S.<br>I enjoy tackling complex math word problems, writing engaging narratives, and delivering well-crafted speeches. My hobbies include coding and playing the piano. <br>I am a certified Python programmer and earned 1st place in Python Beginner section of the <a href="https://icode.org/final-results/">iCode Global Hackathon</a>, the world’s largest K–12 hackathon.<br>I have been working with different programming languages since Grade 3. <br>Building this website was challenging, but I truly enjoyed the experience. <br>I hope you have a great time exploring it—whether you choose to read my blogs, play my games, or browse the pages.</p>
-            
-           
-            <p><b><a href="https://happycoder2000.github.io/Blogs.html">My Blogs</a> &nbsp;| 
-            <a href="https://happycoder2000.github.io/Games.html">My Games</a> |&nbsp;
-            <a href="https://happycoder2000.github.io/Content.html">My Web pages</a></b>
-          
-        </h4>
-            <img src="https://user-images.githubusercontent.com/76495488/222008329-5e83372f-31b2-4950-968a-1021b0d9f649.jpg" height="500" width="650">
-        
-        
-         
-    </body> 
+function English() {
+    document.getElementById("About-me").innerHTML =
+    "Hello, my name is Ansh Shrivastava, and I’m a Grade 8 student at Lorenville P.S.<br>" +
+    "I enjoy tackling complex math word problems, writing engaging narratives, and delivering well-crafted speeches. " +
+    "My hobbies include coding and playing the piano.<br><br>" +
+    "I am a certified Python programmer and earned 1st place in the Python Beginner section of the " +
+    "<a href='https://icode.org/final-results/'>iCode Global Hackathon</a>, the world’s largest K–12 hackathon.<br><br>" +
+    "I have been working with different programming languages since Grade 3. Building this website was challenging, " +
+    "but I truly enjoyed the experience.<br><br>" +
+    "I hope you have a great time exploring it—whether you choose to read my blogs, play my games, or browse the pages.";
+}
+</script>
+
+</body>
 </html>
