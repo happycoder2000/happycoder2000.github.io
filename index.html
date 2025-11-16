@@ -14,7 +14,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: auto;
             background: white;
             padding: 25px;
@@ -28,7 +28,7 @@
         }
 
         .buttons {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         button {
@@ -48,8 +48,8 @@
 
         .links {
             font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 15px;
+            margin-bottom: 20px;
         }
 
         .links a {
@@ -62,33 +62,16 @@
             text-decoration: underline;
         }
 
-        /* FLEX CONTAINER FOR TEXT + IMAGE */
-        .about-flex {
-            display: flex;
-            gap: 30px;          /* space between text and image */
-            flex-wrap: wrap;    /* stack on smaller screens */
-            align-items: flex-start;
-        }
-
-        #About-me {
-            flex: 1;            /* text takes remaining space */
-            min-width: 250px;   /* ensures readability on small screens */
-        }
-
         .photo {
-            flex: 0 0 400px;    /* fixed image width */
-            text-align: right;
+            margin-top: 20px;
+            text-align: center;
         }
 
         .photo img {
-            width: 100%;
+            width: 60%;
             max-width: 400px;
             border-radius: 10px;
             box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-        }
-
-        a {
-            color: #004a78;
         }
     </style>
 </head>
@@ -104,14 +87,55 @@
 
         <h2>About Me</h2>
 
-        <div class="about-flex">
-            <p id="About-me">
-                Hello, my name is Ansh Shrivastava, and I’m a Grade 8 student at Lorenville P.S.<br>
-                I enjoy tackling complex math word problems, writing engaging narratives, and delivering well-crafted speeches.
-                My hobbies include coding and playing the piano.<br><br>
-                I am a certified Python programmer and earned 1st place in the Python Beginner section of the 
-                <a href="https://icode.org/final-results/">iCode Global Hackathon</a>, the world’s largest K–12 hackathon.<br><br>
-                I have been working with different programming languages since Grade 3.
-                Building this website was challenging, but I truly enjoyed the experience.<br><br>
-                I hope you have a great time exploring it—whether you choose to read my blogs, play my games, or browse the pages.
-            </p>
+        <p id="About-me">
+            Hello, my name is Ansh Shrivastava, and I’m a Grade 8 student at Lorenville P.S.<br>
+            I enjoy tackling complex math word problems, writing engaging narratives, and delivering well-crafted speeches.
+            My hobbies include coding and playing the piano.<br><br>
+            I am a certified Python programmer and earned 1st place in the Python Beginner section of the 
+            <a href="https://icode.org/final-results/">iCode Global Hackathon</a>, the world’s largest K–12 hackathon.<br><br>
+            I have been working with different programming languages since Grade 3.
+            Building this website was challenging, but I truly enjoyed the experience.<br><br>
+            I hope you have a great time exploring it—whether you choose to read my blogs, play my games, or browse the pages.
+        </p>
+
+        <div class="links">
+            <a href="https://happycoder2000.github.io/Blogs.html">My Blogs</a> &nbsp;|&nbsp;
+            <a href="https://happycoder2000.github.io/Games.html">My Games</a> &nbsp;|&nbsp;
+            <a href="https://happycoder2000.github.io/Content.html">My Web Pages</a>
+        </div>
+
+        <div class="photo">
+            <img src="https://user-images.githubusercontent.com/76495488/222008329-5e83372f-31b2-4950-968a-1021b0d9f649.jpg">
+        </div>
+
+    </div>
+
+<script>
+function French() {
+    document.getElementById("About-me").innerHTML = 
+    "Bonjour, je m’appelle Ansh Shrivastava et je suis élève de 8e année à Lorenville P.S.<br>" +
+    "J’aime résoudre des problèmes de mathématiques complexes, écrire des récits captivants " +
+    "et présenter des discours bien structurés. Mes passe-temps incluent le codage et le piano.<br><br>" +
+    "Je suis programmeur certifié en Python et j’ai remporté la 1ère place dans la catégorie Débutant Python " +
+    "du <a href='https://icode.org/final-results/'>Hackathon mondial iCode</a>, le plus grand hackathon K–12 au monde.<br><br>" +
+    "Je travaille avec différents langages de programmation depuis la 3e année. Construire ce site Web a été un défi, " +
+    "mais j’ai vraiment apprécié l’expérience.<br><br>" +
+    "J’espère que vous passerez un excellent moment en l'explorant—que vous choisissiez de lire mes blogs, " +
+    "jouer à mes jeux ou parcourir mes pages Web.";
+}
+
+function English() {
+    document.getElementById("About-me").innerHTML =
+    "Hello, my name is Ansh Shrivastava, and I’m a Grade 8 student at Lorenville P.S.<br>" +
+    "I enjoy tackling complex math word problems, writing engaging narratives, and delivering well-crafted speeches. " +
+    "My hobbies include coding and playing the piano.<br><br>" +
+    "I am a certified Python programmer and earned 1st place in the Python Beginner section of the " +
+    "<a href='https://icode.org/final-results/'>iCode Global Hackathon</a>, the world’s largest K–12 hackathon.<br><br>" +
+    "I have been working with different programming languages since Grade 3. Building this website was challenging, " +
+    "but I truly enjoyed the experience.<br><br>" +
+    "I hope you have a great time exploring it—whether you choose to read my blogs, play my games, or browse the pages.";
+}
+</script>
+
+</body>
+</html>
